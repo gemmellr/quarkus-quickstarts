@@ -14,10 +14,12 @@
 
         <security-enabled>false</security-enabled>
 
-        <queues>
-            <queue name="foo">
-                <address>prices</address>
-            </queue>
-        </queues>
+        <addresses>
+            <address name="prices">
+                <anycast>
+                    <queue name="prices" />
+                </anycast>
+            </address>
+        </addresses>
     </core>
 </configuration>
